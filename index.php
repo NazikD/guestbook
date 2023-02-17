@@ -1,5 +1,8 @@
-git init<?php
+<?php
 require_once("config.php");
+
+use Guestbook\Classes\Comment;
+
 if (empty($_SESSION['user_id'])) {
     header("location: /login.php");
 }
@@ -11,6 +14,7 @@ if (empty($_SESSION['user_id'])) {
 // $stmt = $dbConn->prepare("SELECT * FROM comments ORDER BY id DESC");
 // $stmt->execute();
 // $comments = $stmt->fetchAll();
+
 
 
 $comment = new Comment();

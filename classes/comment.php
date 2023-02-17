@@ -1,4 +1,7 @@
 <?php
+
+namespace Guestbook\Classes;
+
 class Comment extends DB
 {
     public $id;
@@ -18,7 +21,7 @@ class Comment extends DB
         $stmt = $this->conn->prepare('SELECT * FROM comments ORDER BY id DESC');
         $stmt->execute();
         $comments = [];
-        while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
+        while ($row = $stmt->fetch(\PDO::FETCH_LAZY)) {
             $comments[] = ['id' => $row->id, 'user_id' => $row->user_id, 'comment' => $row->comment, 'created_at' => $row->created_at];
         }
         return $comments;

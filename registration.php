@@ -1,6 +1,9 @@
 <?php
 require_once("config.php");
 
+use Guestbook\Classes\User;
+use Guestbook\Classes\Validator;
+use Guestbook\Classes\DB;
 
 if (!empty($_SESSION['user_id'])) {
     header("location: /index.php");

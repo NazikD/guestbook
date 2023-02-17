@@ -1,4 +1,7 @@
 <?php
+
+namespace Guestbook\Classes;
+
 class Validator
 {
     private $_db;
