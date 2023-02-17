@@ -4,6 +4,8 @@ include_once("classes/user.php");
 include_once("classes/comment.php");
 include_once("classes/validator.php");
 
+require_once __DIR__ . '/vendor/autoload.php';
+
 session_start();
 define("HOST", "localhost");
 define("USER", "root");
